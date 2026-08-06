@@ -1,11 +1,10 @@
-name : Demo 1
-
-on : Workflow_dispatch
+name : Demo_1
+on:
+ workflow_dispatch:
 
 jobs : 
-      Dev :
-      runs-on:ubuntu:latest
-
+ Dev :
+      runs-on: ubuntu:latest
       steps: 
           - run: echo "Welcome to git hub actions"
           
