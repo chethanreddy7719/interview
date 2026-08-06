@@ -4,7 +4,7 @@ on:
 
 jobs : 
  Dev :
-      runs-on: ubuntu:latest
+      runs-on: ubuntu-latest
       steps: 
           - run: echo "Welcome to git hub actions"
           
