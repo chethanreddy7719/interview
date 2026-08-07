@@ -1,17 +1,18 @@
-name: test
+name: demo
 
 on:
   push:
     branches:
       - master
+
   pull_request:
     branches:
       - master
 
 jobs:
-  checkout:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print Message
-        run: echo ""
+        run: echo "Workflow triggered successfully"
