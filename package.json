@@ -1,0 +1,13 @@
+{
+  "name": "welcome-github-actions",
+  "version": "1.0.0",
+  "description": "Simple Node.js app showing Welcome to GitHub Actions with Bootstrap 5",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"No tests defined\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
