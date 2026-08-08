@@ -6,12 +6,25 @@ on:
       - master
 
 jobs:
-  checkout:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: List Files
-        run: ls -lrt
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start app in background
+        run: npm start &
+
+      - name: Wait for server and verify
+        run: |
+          sleep 10
+          curl -I http://localhost:3000 || exit 1
